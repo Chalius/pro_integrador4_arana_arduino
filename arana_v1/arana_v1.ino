@@ -31,11 +31,11 @@ void setup()
 
   derAtras.init(7, 5, 6);
   derAtras.posInicial(60, 90, 90);
-  derAtras.setPosesHombro(30, 100); // primero:20,100
+  derAtras.setPosesHombro(30, 120); // primero:20,100
   derAtras.setPosesCodoManoArriba(150, 40);
   derAtras.setPosesCodoManoAbajo(90, 90);
 
-  delay(3000);
+  delay(1000);
 
   Serial.println("pasando por setup");
 
@@ -50,20 +50,20 @@ void loop()
   izqAtras.pasoContraDireccion();
   izqAdelante.pasoEnSuDireccion();
 
-  derAdelante.avanceDer();
-  derAtras.avanceDer();
-  izqAdelante.avanceIzq();
-  izqAtras.avanceIzq();
+  derAdelante.avance();
+  derAtras.avance();
+  izqAdelante.avance();
+  izqAtras.avance();
 
-  delay(600);
+  delay(200);
 
   derAtras.pasoContraDireccion();
   derAdelante.pasoEnSuDireccion();
 
-  derAdelante.avanceDer();
-  derAtras.avanceDer();
-  izqAdelante.avanceIzq();
-  izqAtras.avanceIzq();
+  derAdelante.avance();
+  derAtras.avance();
+  izqAdelante.avance();
+  izqAtras.avance();
 
-  delay(600);
+  delay(200);
 }

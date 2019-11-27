@@ -76,11 +76,11 @@ public:
     this->codo_pos_ini = codo_pos_ini;
     this->mano_pos_ini = mano_pos_ini;
     moverServo(hombro, hombro_pos_ini, true); // hombro 4
-    delay(delayEntreServos);
+    delay(delayEntreServos/2);
     moverServo(codo, codo_pos_ini, true); // codo 2
-    delay(delayEntreServos);
+    delay(delayEntreServos/2);
     moverServo(mano, mano_pos_ini, true); // mano 3
-    delay(delayEntrePosiciones * 2);
+    delay(delayEntrePosiciones);
   }
 
   void setPosesHombro(int pos_hombro_adelante, int pos_hombro_atras){
@@ -115,16 +115,12 @@ public:
   void pasoEnSuDireccion()
   {
     posAdelante(true);
-    delay(delayEntrePosiciones);
-    //posAtras(false);
     //delay(delayEntrePosiciones);
   }
 
   void pasoContraDireccion()
   {
     posAtras(true);
-    delay(delayEntrePosiciones);
-    //posAdelante(false);
     //delay(delayEntrePosiciones);
   }
 
@@ -140,12 +136,10 @@ public:
     }
   }
 
-  void avanceIzq(){
+  void avance(){
     moverServo(hombro,hombro_pos_ini, false);
   }
 
-  void avanceDer(){
-    moverServo(hombro,hombro_pos_ini, false);
-  }
+
 
 };
