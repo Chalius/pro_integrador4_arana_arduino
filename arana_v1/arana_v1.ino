@@ -16,7 +16,9 @@ void setup()
   derAdelante.setPosesCodoManoAbajo(90, 120);
 
   izqAtras.init(13, 11, 12);
+
   izqAtras.posInicial(150, 90, 90); // 130,90,90
+
   izqAtras.setPosesHombro(170, 90); // primero:160,70
   izqAtras.setPosesCodoManoArriba(40, 150);
   izqAtras.setPosesCodoManoAbajo(90, 120);
@@ -57,10 +59,12 @@ void setup()
 void loop()
 {
   
+
   avanzar(200);
   //retroceder(200);
   //girarIzq(200);
   //girarDer(200);
+
 }
 
 void avanzar(int tiempoEntrePasos){
@@ -90,6 +94,7 @@ void avanzar(int tiempoEntrePasos){
 
 void retroceder(int tiempoEntrePasos){
   
+
   izqAdelante.posInicial(40, 90, 90);
   derAdelante.posInicial(145, 90, 90);
 
@@ -100,6 +105,7 @@ void retroceder(int tiempoEntrePasos){
 
   //izqAtras.posInicial(65, 90, 90);
   //derAtras.posInicial(150, 90, 90);
+
 
 
   izqAdelante.pasoContraDireccion();
@@ -135,7 +141,9 @@ void girarIzq(int tiempoEntrePasos){
   derAtras.pasoContraDireccion();
   derAdelante.pasoEnSuDireccion();
 
+
   derAdelante.avance();
+
   derAtras.avance();
   izqAdelante.avance();
   izqAtras.avance();
@@ -157,4 +165,5 @@ void girarDer(int tiempoEntrePasos){
   izqAtras.avance();
 
   delay(tiempoEntrePasos);
+
 }
